@@ -27,17 +27,7 @@
 
 A complete end-to-end IoT closed-loop system built on **ESP32-C3 (RISC-V)**. The hardware node collects ambient temperature and humidity data, formats it into JSON packets, and publishes them over Wi-Fi to an **Eclipse Mosquitto MQTT Broker**. A **Python FastAPI** backend consumes the telemetry stream, persists records into an embedded **SQLite** database, and provides RESTful APIs. The **Vue 3 + Vite + ECharts** frontend visualizes real-time sensor dynamics and dispatches remote reverse-control commands back to the hardware GPIOs, achieving a full-stack engineering loop across firmware, middleware, backend, and frontend.
 
----
 
-## 演示
-
-> 建议将联调过程中的动图或截图存放于 `docs/` 目录：
->
-> | 系统大屏看板 | 硬件串口上报 | 反向开灯响应 |
-> | :---: | :---: | :---: |
-> | ![看板](docs/dashboard.png) | ![串口](docs/serial.png) | ![硬件响应](docs/hardware.gif) |
-
----
 
 ## 系统架构
 
